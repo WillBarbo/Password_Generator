@@ -127,5 +127,3 @@ function runPasswordGenerator(array, numUser2) {
   result.textContent = copiedPass
   return
 }
-
-//console.log('lol')
