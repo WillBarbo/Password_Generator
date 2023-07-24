@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo</title>
+  </head>
+  <body>
+    <section class="container">
+      <h1>Password Generator</h1>
+
+      <div class="join">
+        <div class="result"></div>
+        <div class="img">
+          <input
+            type="image"
+            src="/src/assets/img/imageCopy.jpg"
+            id="copy"
+            class="copy"
+            title="Copy"
+          />
+          <input
+            type="image"
+            src="/src/assets/img/iconReload.jpg"
+            id="reload"
+            class="reload"
+            title="Generate"
+          />
+        </div>
+      </div>
+
+      <div class="power">
+        <div id="levelPower" class="power4"></div>
+      </div>
+
+      <form>
+        <div class="lineChar">
+          <div class="character">
+            <label for="char">Characteres</label>
+            <input type="number" id="char" class="char" min="1" max="25" />
+          </div>
+          <div class="slidercontainer">
+            <input
+              type="range"
+              min="1"
+              max="25"
+              value="11"
+              class="slider"
+              id="myRange"
+            />
+          </div>
+        </div>
+        <div id="num">
+          <label for="num">Numbers</label>
+          <input type="checkbox" name="num" class="num" checked />
+        </div>
+        <div id="upper">
+          <label for="upper">Uppercase</label>
+          <input type="checkbox" name="upper" class="upper" checked />
+        </div>
+        <div id="lower">
+          <label for="lower">Lowercase</label>
+          <input type="checkbox" name="lower" class="lower" checked />
+        </div>
+        <div id="symbol">
+          <label for="symbol">Symbols</label>
+          <input type="checkbox" name="symbol" class="symbol" checked />
+        </div>
+        <button class="submit" type="submit">Generate</button>
+      </form>
+    </section>
+
+    <script src="./assets/js/bundle.js"></script>
+  </body>
+</html>
