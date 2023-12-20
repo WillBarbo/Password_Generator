@@ -61,10 +61,10 @@ document.addEventListener('click', e => {
 
   if (el.classList.contains('copy')) {
     navigator.clipboard.writeText(copiedPass).then(() => {
-      img.setAttribute('src', '/src/assets/img/checkMark.gif')
+      img.setAttribute('src', 'https://encurtador.com.br/aDEOW')
       img.classList.remove('copy')
       setTimeout(function () {
-        img.setAttribute('src', '/src/assets/img/imageCopy.jpg')
+        img.setAttribute('src', 'https://encurtador.com.br/iBX78')
         img.classList.add('copy')
       }, 2900)
     })
