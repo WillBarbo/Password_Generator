@@ -7,8 +7,8 @@ let arrayNum = [1, 2, 3, 4]
 let numUser2 = (document.querySelector('.char').value = 11)
 let numUser = Number(document.querySelector('.char').value)
 let copiedPass = ''
+const img = document.getElementById('copy')
 const power = document.getElementById('levelPower')
-const img = document.querySelector('#copy')
 let slider = document.getElementById('myRange')
 
 runPasswordGenerator(arrayNum, numUser2)
@@ -60,14 +60,13 @@ document.addEventListener('click', e => {
   levelPower()
 
   if (el.classList.contains('copy')) {
-    navigator.clipboard.writeText(copiedPass).then(() => {
-      img.setAttribute('src', 'https://encurtador.com.br/aDEOW')
-      img.classList.remove('copy')
-      setTimeout(function () {
-        img.setAttribute('src', 'https://encurtador.com.br/iBX78')
-        img.classList.add('copy')
-      }, 2900)
-    })
+    navigator.clipboard.writeText(copiedPass)
+    img.src = '/src/assets/img/copy_gif.gif'
+    img.classList.remove('copy')
+    setTimeout(function () {
+      img.src = '/src/assets/img/copy_img.png'
+      img.classList.add('copy')
+    }, 1200)
   }
   if (el.classList.contains('reload')) {
     const element = document.getElementById('reload')
