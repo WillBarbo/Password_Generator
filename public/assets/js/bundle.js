@@ -862,10 +862,10 @@ document.addEventListener('click', function (e) {
   levelPower();
   if (el.classList.contains('copy')) {
     navigator.clipboard.writeText(copiedPass);
-    img.src = '../src/images/copyGif.gif';
+    img.src = './static/images/copyGif.gif';
     img.classList.remove('copy');
     setTimeout(function () {
-      img.src = '../src/images/copyImg.png';
+      img.src = './static/images/copyImg.png';
       img.classList.add('copy');
     }, 1200);
   }
