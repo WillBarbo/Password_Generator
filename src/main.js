@@ -1,5 +1,7 @@
 import PasswordGenerator from './modules/PasswordGenerator'
 
+import "./assets/css/style.css"
+
 let arrayNum = [1, 2, 3, 4]
 
 let numUser2 = (document.querySelector('.char').value = 11)
