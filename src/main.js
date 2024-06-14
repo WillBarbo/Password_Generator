@@ -1,7 +1,5 @@
 import PasswordGenerator from './modules/PasswordGenerator'
 
-import './assets/css/style.css'
-
 let arrayNum = [1, 2, 3, 4]
 
 let numUser2 = (document.querySelector('.char').value = 11)
@@ -62,16 +60,18 @@ document.addEventListener('click', e => {
   if (el.classList.contains('copy')) {
     navigator.clipboard.writeText(copiedPass)
     img.src = './static/images/copyGif.gif'
-    img.classList.remove('copy')
+    img.disabled = true
     setTimeout(function () {
+      img.disabled = false
       img.src = './static/images/copyImg.png'
-      img.classList.add('copy')
     }, 1200)
   }
   if (el.classList.contains('reload')) {
     const element = document.getElementById('reload')
     element.classList.add('generate')
+    element.disabled = true
     setTimeout(function () {
+      element.disabled = false
       element.classList.remove('generate')
     }, 600)
     runPasswordGenerator(arrayNum, numUser2)
